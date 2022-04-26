@@ -25,9 +25,9 @@ app.use(express.json())
 app.use(express.static('public')) // express will use the public directory for static files... this way the app will find index.html as the route of the app. We can then attach React to that file
 app.use(cors())
 
-// Route 
-const productController = require('./controllers/products.js')
-app.use('/product', productController )
+// Routes 
+const productsController = require('./controllers/products.js')
+app.use('/products', productsController )
 
 
 app.listen(PORT, () => {
