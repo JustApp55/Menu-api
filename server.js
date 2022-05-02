@@ -5,7 +5,6 @@ const mongoose = require('mongoose')
 const cors = require('cors')
 const db = mongoose.connection
 
-
 //Environment Varables 
 const app = express()
 const mongoURI = process.env.MONGODB_URI 
@@ -27,7 +26,7 @@ app.use(cors())
 
 // Routes 
 const productsController = require('./controllers/products.js')
-app.use('/products', productsController )
+app.use('/products', productsController)
 
 
 app.listen(PORT, () => {
